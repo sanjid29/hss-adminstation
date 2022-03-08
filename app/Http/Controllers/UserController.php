@@ -45,7 +45,7 @@ class UserController extends CustomController
             'password' => 'required|confirmed',
             'first_name' => 'required|max:200',
             'last_name' => 'required|max:200',
-            'mobile' => 'required|max:200',
+            'mobile_no' => 'required|max:200',
         ]);
 
         if ($validator->fails()) // on validator found any error

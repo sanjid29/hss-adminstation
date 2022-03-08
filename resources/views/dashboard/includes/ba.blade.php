@@ -1,11 +1,11 @@
 @extends('template.master')
-@section('title','Ministry DashBoard')
+@section('title','Biometric Attendance')
 @section('breadcrumb')
     @parent
 @endsection
 @section('content')
     <div class="callout callout-info">
-        <h4>Project Management Plan</h4>
+        <h4>Biometric Attendance</h4>
     </div>
     <!-- Default box -->
     <div class="box">

@@ -1,11 +1,11 @@
 @extends('template.master')
-@section('title','Ministry DashBoard')
+@section('title','DHIS2 Central Server')
 @section('breadcrumb')
     @parent
 @endsection
 @section('content')
     <div class="callout callout-info">
-        <h4>CMSD Plan</h4>
+        <h4>DHIS2 Central Server</h4>
     </div>
     <!-- Default box -->
     <div class="box">

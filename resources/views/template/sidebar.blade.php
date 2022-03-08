@@ -28,17 +28,8 @@
     <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
-            <li class="header">MAIN NAVIGATION</li>
+            <li class="header">NAVIGATION</li>
             <li><a href="{{route('home')}}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-            <li><a href="{{route('home.pages','op')}}"><i class="fa fa-dashboard"></i> <span>Operational Plan</span></a>
-            </li>
-            <li><a href="{{route('home.pages','dpp')}}"><i class="fa fa-dashboard"></i> <span>Projects Management</span></a>
-            </li>
-            <li><a href="{{route('home.pages','hrm')}}"><i class="fa fa-dashboard"></i> <span>Health Force</span></a>
-            </li>
-            <li><a href="{{route('home.pages','equipment')}}"><i class="fa fa-dashboard"></i> <span>Equipment</span></a>
-            </li>
-            <li><a href="{{route('home.pages','cmsd')}}"><i class="fa fa-dashboard"></i> <span>CMSD</span></a></li>
             <li><a href="{{route('users.index')}}"><i class="fa fa-user"></i> <span>User</span></a></li>
             <li><a href="{{route('uploads.index')}}"><i class="fa fa-user"></i> <span>Upload</span></a></li>
 

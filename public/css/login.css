@@ -1,0 +1,16 @@
+.login-page {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+    background-image: url('../files/background.jpg')
+}
+.login-logo{
+    background: #fff;
+    padding: 20px;
+    border-top: 0;
+    color: #666;
+    margin-bottom:0!important;
+}

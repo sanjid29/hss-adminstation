@@ -2,9 +2,9 @@
     <!-- Logo -->
     <a href="{{route('home')}}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>M</b>DB</span>
+        <span class="logo-mini">{{env('APP_NAME')}}</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Ministry</b> Dashboard</span>
+        <span class="logo-lg">{{env('APP_NAME')}}</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -150,9 +150,9 @@
                     </ul>
                 </li>
                 <!-- Control Sidebar Toggle Button -->
-                <li>
-                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                </li>
+{{--                <li>--}}
+{{--                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>--}}
+{{--                </li>--}}
             </ul>
         </div>
     </nav>

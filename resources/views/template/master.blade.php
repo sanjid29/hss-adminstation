@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Auth;
 
 $user = Auth::user();
 ?>
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -46,7 +46,7 @@ $user = Auth::user();
 </head>
 <!-- ADD THE CLASS fixed TO GET A FIXED HEADER AND SIDEBAR LAYOUT -->
 <!-- the fixed layout is not compatible with sidebar-mini -->
-<body class="hold-transition skin-blue fixed sidebar-mini">
+<body class="hold-transition skin-black-light fixed sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
     <!-- ============================================== -->
@@ -304,6 +304,7 @@ $user = Auth::user();
 
     <script src="https://kit.fontawesome.com/d988d38c17.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 @show
 @yield('js')
 

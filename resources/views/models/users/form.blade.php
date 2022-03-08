@@ -2,7 +2,9 @@
 use App\Upload;
 ?>
 @extends('template.forms.form')
-
+@section('title')
+    <title>{{env('APP_NAME')}} | Log in</title>
+@endsection
 @section('form-input')
 
     <div class="form-row">
@@ -54,19 +56,15 @@ use App\Upload;
         $profilePic = Upload::where('element_id', $element->id)->first();
         ?>
         <div class="clearfix"></div>
-
         @if($profilePic)
             <div class="form-row">
                 <img src="{{ asset($profilePic->file_path) }}" alt="" title="profile_pic" class="img-thumbnail"
                      width="300px">
             </div>
-
             <form method="POST" action="{{ route('uploads.update',$profilePic->id) }}" enctype="multipart/form-data">
                 @method('put')
-
                 @else
                     <form method="POST" action="{{ route('uploads.store') }}" enctype="multipart/form-data">
-
                         @endif
                         @csrf
                         <input type="hidden" name="element_id" value={{$element->id}}>

@@ -56,6 +56,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard/{pageName}', [Homecontroller::class, 'pages'])->name('home.pages');
     Route::resource('users', UserController::class);
     Route::resource('uploads', UploadController::class);
+    Route::resource('hss-commands', UploadController::class);
 
 
 });
