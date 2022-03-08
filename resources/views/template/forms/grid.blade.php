@@ -15,13 +15,13 @@
     <div class="callout callout-info">
         <div class="row">
             <div class="col-md-6">
-                <h3>List of {{$routeName}}</h3>
+                <h3>List of {{$modelName}}</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
                 <a class="btn btn-adn" href="{{route($routeName.'.create')}}" target="_blank"> Create New </a>
-                <a class="btn " href="{{route($routeName.'.index')}}" target="_blank"><i
+                <a class="btn " href="{{route($routeName.'.index')}}"><i
                             class="fas fa-align-justify"></i></a>
             </div>
         </div>
@@ -46,7 +46,7 @@
 @section('js')
 
     <script type="text/javascript">
-        $(function() {
+        $(function () {
             let table = $('.data-table').DataTable({
                 processing: true,
                 serverSide: true,
@@ -56,7 +56,8 @@
                     {data: 'name', name: 'name'},
                     {data: 'created_at', name: 'created_at'},
                     {data: 'updated_at', name: 'updated_at'},
-                    {data: 'action', name: 'action',
+                    {
+                        data: 'action', name: 'action',
                         orderable: false,
                         searchable: false
                     }

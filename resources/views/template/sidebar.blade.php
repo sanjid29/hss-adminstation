@@ -31,7 +31,8 @@
             <li class="header">NAVIGATION</li>
             <li><a href="{{route('home')}}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
             <li><a href="{{route('users.index')}}"><i class="fa fa-user"></i> <span>User</span></a></li>
-            <li><a href="{{route('uploads.index')}}"><i class="fa fa-user"></i> <span>Upload</span></a></li>
+            <li><a href="{{route('uploads.index')}}"><i class="fa fa-picture-o"></i> <span>Upload</span></a></li>
+            <li><a href="{{route('hssCommands.index')}}"><i class="fa fa-code"></i> <span>Commands</span></a></li>
 
             {{--<li class="treeview active">--}}
             {{--<a href="#">--}}

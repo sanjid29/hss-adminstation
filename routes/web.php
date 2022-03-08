@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HssCommandController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -56,7 +57,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard/{pageName}', [Homecontroller::class, 'pages'])->name('home.pages');
     Route::resource('users', UserController::class);
     Route::resource('uploads', UploadController::class);
-    Route::resource('hss-commands', UploadController::class);
+    Route::resource('hssCommands', HssCommandController::class);
 
 
 });

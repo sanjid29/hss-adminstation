@@ -46,14 +46,14 @@ class CustomController extends Controller
                     $editUrl = route($this->routeName.'.edit', $row->id);
                     $deleteUrl = route($this->routeName.'.destroy', $row->id);
 
-                    $btn = '<a href="'.$editUrl.'" target="_blank" class="edit btn btn-primary btn-sm">Edit</a>';
+                    $btn = '<a href="'.$editUrl.'"class="edit btn btn-primary btn-sm">Edit</a>';
 //                    $btn = $btn.'  <a href="'.$deleteUrl.'" class="edit btn btn-danger btn-sm" id="delete">Delete</a>';
 
                     return $btn;
                 })
                 ->editColumn('id',function($row){
                     $editUrl = route($this->routeName.'.edit', $row->id);
-                    return '<a href="'.$editUrl.'" target="_blank">'.$row->id.'</a>';
+                    return '<a href="'.$editUrl.$row->id.'</a>';
                 })
                 ->rawColumns(['id','action'])
                 ->make(true);
@@ -98,12 +98,12 @@ class CustomController extends Controller
         if ($validator->fails()) // on validator found any error
         {
             // pass validator object in withErrors method & also withInput it should be null by default
-            return redirect($this->routeName . '.create')->withErrors($validator)->withInput();
+            return redirect(route($this->routeName . '.create'))->withErrors($validator)->withInput();
         }
         $this->modelName::create($request->all());
 
 
-        return redirect($this->routeName . '.create')->with('success', $this->modelName.' created successfully.');
+        return redirect(route($this->routeName . '.create'))->with('success', $this->modelName.' created successfully.');
 
 //        $request->validate([
 //            'first_name' => 'required',
@@ -152,7 +152,7 @@ class CustomController extends Controller
     public function update(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            'email' => 'required|max:100',
+            'name' => 'required|max:100',
             'first_name' => 'required|max:200',
             'last_name' => 'required|max:200',
             'mobile' => 'required|max:200',
@@ -163,12 +163,12 @@ class CustomController extends Controller
         if ($validator->fails()) // on validator found any error
         {
             // pass validator object in withErrors method & also withInput it should be null by default
-            return redirect(route($this->routeName.'.edit'))->withErrors($validator)->withInput();
+            return redirect(route($this->routeName.'.edit',$id))->withErrors($validator)->withInput();
         }
         $element->update($request->all());
 
 
-        return redirect(route($this->routeName.'.edit'))->with('success', 'User updated successfully.');
+        return redirect(route($this->routeName.'.edit',$id))->with('success', 'User updated successfully.');
 
 
 //        return view($this->viewPath . '.form', [
